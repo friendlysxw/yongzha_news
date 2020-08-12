@@ -1,2 +1,21 @@
 <!--index.wxml-->
+<!-- 引入加载中视图模板 -->
+<import src="/templates/spinner.wxml"/>
+<!-- 引入页脚视图模板 -->
+<import src="/templates/footer.wxml"/>
 
+<navigator url="/pages/news/read?id={{item.id}}" class="media-box media-box_appmsg" wx:for="{{entities}}" wx:key="{{ item.id }}">
+  <view class="media-box__hd media-box__hd_in-appmsg" wx:if="{{item.img}}">
+    <image class="media-box__thumb" src="{{ API_BASE+item.img }}"></image>
+  </view>
+  <view class="media-box__bd media-box__bd_in-appmsg">
+    <view class="media-box__title">
+      {{item.title}}
+    </view>
+    <view class="media-box__desc">
+      {{item.preview_text}}
+    </view>
+  </view>
+</navigator>
+<template is="spinner" data="{{ isLoading }}"> </template>
+<template is="footer" data="{{ show_footer }}"> </template>

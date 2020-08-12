@@ -1,0 +1,15 @@
+<!-- 引入加载中视图模板 -->
+<import src="/templates/spinner.wxml"/>
+<view class="featured-media news_img" wx:if="{{ img }}">
+  <image mode="aspectFill" src="{{ img }}"></image>
+</view>
+<view class="article">
+  <view class="article__h1 news_title">{{title}}</view>
+  <view class="news_time" wx:if="{{create_time}}">发布时间：{{create_time}}</view>
+  <view class="article__section">
+    <view class="article__p">
+      <rich-text nodes="{{content}}"></rich-text>
+    </view>
+  </view>
+</view>
+<template is="spinner" data="{{ isLoading }}"> </template>

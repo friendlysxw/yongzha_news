@@ -1,0 +1,16 @@
+/* pages/news/read.wxss */
+.news_img image{
+  width:100%;
+  height: 220px;
+}
+.news_title{
+  text-align: center;
+}
+.news_time{
+  text-align: center;
+  color: #999;
+  margin-bottom: 10px;
+}
+.news_content_img{
+  max-width: 100% ;
+}
