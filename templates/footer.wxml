@@ -1,5 +1,5 @@
 <template name="footer">
   <view class="footer" wx:if="{{ show_footer }}">
-    人家也是有底线的呢！(✿◡‿◡)
+    没有更多内容了！(✿◡‿◡)
   </view>
 </template>

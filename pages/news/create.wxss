@@ -1,0 +1,8 @@
+/* pages/news/create.wxss */
+.preview-text{
+  height: 10vh;
+}
+.note-text{
+  color:#A9A9A9;
+  font-size:14px;
+}

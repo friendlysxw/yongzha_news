@@ -1,6 +1,6 @@
 // pages/news/read.js
 const app = getApp();
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://yongzha.shixuewen.top/";
 const API_ROUTE = "wxapi/news/read";
 Page({
 
@@ -29,10 +29,14 @@ Page({
         const content=data.content;
         const img=data.img;
         const create_time=data.create_time;
+        // 先匹配下链接，只要不带外部域名的链接都添加自己的域名
+        let content_replace=content.replace(/src="((?!http))/g,`src="${API_BASE}`);
+        // 匹配图片，为图片添加类名，使其宽度适应手机宽度
+        content_replace=content_replace.replace(/\<img/g,`<img class="news_content_img"`);
         this.setData({
           ...data,
-          img:API_BASE+img,
-          content:content.replace(/src="/g,`class="news_content_img" src="${API_BASE}`),
+          img:img?API_BASE+img:"",
+          content:content_replace,
           isLoading: false
         });
         wx.setNavigationBarTitle({

@@ -1,5 +1,5 @@
 const app = getApp();
-const API_BASE = "http://localhost:8000";
+const API_BASE = "https://yongzha.shixuewen.top/";
 const API_ROUTE = "wxapi/news/index";
 
 Page({
@@ -26,7 +26,6 @@ Page({
           isLoading:false,
           show_footer: response.data.total_page>1?false:true
         })
-        console.log(response.data)
       }
     })
   } ,
@@ -46,7 +45,6 @@ Page({
           per_page:response.data.per_page
         })
         wx.stopPullDownRefresh();
-        console.log(response.data)
       }
     })
   },
@@ -78,7 +76,6 @@ Page({
           curr_page: curr_page,
           isLoading:false
         });
-        console.log(response.data)
       }
     })
   }

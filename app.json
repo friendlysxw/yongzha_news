@@ -1,9 +1,10 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/stories/index",
-    "pages/news/read"
-    
+    "pages/admin/login",
+    "pages/admin/show",
+    "pages/news/read",
+    "pages/news/create"
   ],
   "window": {
     "navigationBarTitleText": "永柞资讯",
@@ -23,8 +24,14 @@
         "selectedIconPath": "assets/icons/home-active.png"
       },
       {
+        "text": "发布",
+        "pagePath": "pages/news/create",
+        "iconPath": "assets/icons/add.png",
+        "selectedIconPath": "assets/icons/add-active.png"
+      },
+      {
         "text": "管理员",
-        "pagePath": "pages/stories/index",
+        "pagePath": "pages/admin/show",
         "iconPath": "assets/icons/face.png",
         "selectedIconPath": "assets/icons/face-active.png"
       }

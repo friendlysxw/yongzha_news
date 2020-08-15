@@ -13,7 +13,7 @@
       {{item.title}}
     </view>
     <view class="media-box__desc">
-      {{item.preview_text}}
+      {{item.preview_text || item.content}}
     </view>
   </view>
 </navigator>
