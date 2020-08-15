@@ -1,8 +1,8 @@
 <!-- 引入加载中视图模板 -->
 <import src="/templates/spinner.wxml"/>
-<view class="featured-media news_img" wx:if="{{ img }}">
+<!-- <view class="featured-media news_img" wx:if="{{ img }}">
   <image mode="aspectFill" src="{{ img }}"></image>
-</view>
+</view> -->
 <view class="article">
   <view class="article__h1 news_title">{{title}}</view>
   <view class="news_time" wx:if="{{create_time}}">发布时间：{{create_time}}</view>

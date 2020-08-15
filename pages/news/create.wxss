@@ -1,6 +1,9 @@
 /* pages/news/create.wxss */
 .preview-text{
-  height: 10vh;
+  height: 3em;
+}
+.content{
+  height: 8em;
 }
 .note-text{
   color:#A9A9A9;
